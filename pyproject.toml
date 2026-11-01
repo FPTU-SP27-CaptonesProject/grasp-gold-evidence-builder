@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "grasp-gold-evidence-builder"
+version = "0.1.0"
+description = "Audited benchmark-evidence to GRASP retrieval-ID mapper."
+readme = "README.md"
+requires-python = ">=3.11"
+
+[project.optional-dependencies]
+download = ["pyarrow>=18"]
+dev = ["pytest>=8", "ruff>=0.11"]
+
+[project.scripts]
+grasp-gold-inventory = "grasp_gold_evidence_builder.cli:inventory_main"
+grasp-gold-build = "grasp_gold_evidence_builder.cli:build_main"
+grasp-gold-validate = "grasp_gold_evidence_builder.cli:validate_main"
+grasp-gold-questions = "grasp_gold_evidence_builder.cli:questions_main"
+grasp-gold-align-nq = "grasp_gold_evidence_builder.align_nq:main"
+grasp-gold-fetch = "grasp_gold_evidence_builder.download:main"
+grasp-gold-pipeline = "grasp_gold_evidence_builder.pipeline:main"
+grasp-gold-package = "grasp_gold_evidence_builder.handoff:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

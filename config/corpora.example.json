@@ -1,0 +1,5 @@
+{
+  "2wiki_ircot": {"passages_sqlite": "/workspace/data/grasp-retrieval/2wiki_ircot/passages.sqlite"},
+  "hotpotqa_abstracts_2017": {"passages_sqlite": "/workspace/data/grasp-retrieval/hotpotqa_abstracts_2017/passages.sqlite"},
+  "wiki18": {"passages_sqlite": "/workspace/data/grasp-retrieval/wiki18/passages.sqlite"}
+}

@@ -1,0 +1,14 @@
+{
+  "hotpotqa/train.json": {
+    "url": "http://curtis.ml.cmu.edu/datasets/hotpot/hotpot_train_v1.1.json",
+    "revision": "v1.1",
+    "license": "CC BY-SA 4.0",
+    "downloaded_at_utc": "<UTC timestamp>"
+  },
+  "2wiki/train.json": {
+    "url": "https://www.dropbox.com/s/npidmtadreo6df2/data.zip?dl=1",
+    "revision": "official data.zip",
+    "license": "<verify before publication>",
+    "downloaded_at_utc": "<UTC timestamp>"
+  }
+}
