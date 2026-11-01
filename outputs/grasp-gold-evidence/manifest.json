@@ -1,0 +1,341 @@
+{
+  "schema_version": "grasp-gold-evidence-v1",
+  "retrieval_repository": "doancuavahk/grasp-retrieval",
+  "retrieval_revision": "28658c8f6442c3aebb5abc6974a52184dca59e9e",
+  "created_at_utc": "2026-11-01T09:45:16.072643+00:00",
+  "corpora": {
+    "2wiki_ircot": {
+      "passages_sqlite": "D:\\FPTU\\FPTU-SP26-CaptonesProject\\hf-artifacts\\grasp-retrieval\\2wiki_ircot\\passages.sqlite",
+      "passages_sqlite_sha256": "ee5d494306748b2814ba94558c6d807101b2229f2fefed33f4d4f91f4b806584",
+      "source_dataset": [
+        {
+          "path": "2wiki/dev.json",
+          "sha256": "48b9bdc69654dc580fda5f935a48b88cb89f11887587310af60d406c8d0111a6",
+          "source": {
+            "url": "https://www.dropbox.com/s/npidmtadreo6df2/data.zip?dl=1",
+            "revision": "archive-sha256:e8e57c0aafc4a26d41131e320ebb5afb6f2aca86b8a6e6611b08f52033cb7d04",
+            "license": "See official 2WikiMultiHopQA dataset terms",
+            "source_split": "dev",
+            "archive_member": "data/dev.json",
+            "archive_sha256": "e8e57c0aafc4a26d41131e320ebb5afb6f2aca86b8a6e6611b08f52033cb7d04",
+            "sha256": "48b9bdc69654dc580fda5f935a48b88cb89f11887587310af60d406c8d0111a6",
+            "downloaded_at_utc": "2026-11-01T06:16:08.869800+00:00"
+          }
+        },
+        {
+          "path": "2wiki/train.json",
+          "sha256": "b3fddb4d5bb42cd797919cad67616545be51b24740e0a7dabdae7bf76b8f7bfa",
+          "source": {
+            "url": "https://www.dropbox.com/s/npidmtadreo6df2/data.zip?dl=1",
+            "revision": "archive-sha256:e8e57c0aafc4a26d41131e320ebb5afb6f2aca86b8a6e6611b08f52033cb7d04",
+            "license": "See official 2WikiMultiHopQA dataset terms",
+            "source_split": "train",
+            "archive_member": "data/train.json",
+            "archive_sha256": "e8e57c0aafc4a26d41131e320ebb5afb6f2aca86b8a6e6611b08f52033cb7d04",
+            "sha256": "b3fddb4d5bb42cd797919cad67616545be51b24740e0a7dabdae7bf76b8f7bfa",
+            "downloaded_at_utc": "2026-11-01T06:16:08.564870+00:00"
+          }
+        }
+      ],
+      "mapping_method": "gold_ctx_id | supporting_fact_title",
+      "title_normalization": "HTML unescape; Unicode NFKC; casefold; underscores to spaces; collapse whitespace; preserve punctuation"
+    },
+    "hotpotqa_abstracts_2017": {
+      "passages_sqlite": "D:\\FPTU\\FPTU-SP26-CaptonesProject\\hf-artifacts\\grasp-retrieval\\hotpotqa_abstracts_2017\\passages.sqlite",
+      "passages_sqlite_sha256": "c6adce82c798121d4ca942d1af19f6a841e035f88d1b2b59bcb434b3304e039a",
+      "source_dataset": [
+        {
+          "path": "hotpotqa/dev.json",
+          "sha256": "a5eb3877b9ae19ae2d9800c3bf0481d779b7a24756dc6fc204a4178d550cfc94",
+          "source": {
+            "url": "https://huggingface.co/datasets/hotpotqa/hotpot_qa",
+            "revision": "1908d6afbbead072334abe2965f91bd2709910ab",
+            "license": "CC BY-SA 4.0",
+            "source_split": "validation",
+            "rows": 7405,
+            "downloaded_artifacts": [
+              {
+                "url": "https://huggingface.co/datasets/hotpotqa/hotpot_qa/resolve/1908d6afbbead072334abe2965f91bd2709910ab/distractor/validation-00000-of-00001.parquet",
+                "sha256": "c20b638ca82b21d04fe12e14ff417ad05153d4d215a65de54497fca4e972f7c6"
+              }
+            ],
+            "transformation": "Parquet to official JSON schema; preserve original supporting facts",
+            "sha256": "a5eb3877b9ae19ae2d9800c3bf0481d779b7a24756dc6fc204a4178d550cfc94",
+            "downloaded_at_utc": "2026-11-01T06:15:48.171478+00:00"
+          }
+        },
+        {
+          "path": "hotpotqa/train.json",
+          "sha256": "a1953d547f02d9dba6850104215c0d9af880d691e83f33c3dab5b74b1afa1606",
+          "source": {
+            "url": "https://huggingface.co/datasets/hotpotqa/hotpot_qa",
+            "revision": "1908d6afbbead072334abe2965f91bd2709910ab",
+            "license": "CC BY-SA 4.0",
+            "source_split": "train",
+            "rows": 90447,
+            "downloaded_artifacts": [
+              {
+                "url": "https://huggingface.co/datasets/hotpotqa/hotpot_qa/resolve/1908d6afbbead072334abe2965f91bd2709910ab/distractor/train-00000-of-00002.parquet",
+                "sha256": "76d3bb3048a7cc73c1958107c0c5872a00d7e7d00c105b81e92f6769e7822e68"
+              },
+              {
+                "url": "https://huggingface.co/datasets/hotpotqa/hotpot_qa/resolve/1908d6afbbead072334abe2965f91bd2709910ab/distractor/train-00001-of-00002.parquet",
+                "sha256": "713661628434fbb19fff7392e2e321e4ed107e3c7c7784d0690946e5f722763f"
+              }
+            ],
+            "transformation": "Parquet to official JSON schema; preserve original supporting facts",
+            "sha256": "a1953d547f02d9dba6850104215c0d9af880d691e83f33c3dab5b74b1afa1606",
+            "downloaded_at_utc": "2026-11-01T06:15:45.114894+00:00"
+          }
+        }
+      ],
+      "mapping_method": "gold_ctx_id | supporting_fact_title",
+      "title_normalization": "HTML unescape; Unicode NFKC; casefold; underscores to spaces; collapse whitespace; preserve punctuation"
+    },
+    "wiki18": {
+      "passages_sqlite": "D:\\FPTU\\FPTU-SP26-CaptonesProject\\hf-artifacts\\grasp-retrieval\\wiki18\\passages.sqlite",
+      "passages_sqlite_sha256": "c8355f6468210ee925f5dcf48d6d8a2e855a2b7cd671f3431326a4ac93e121d4",
+      "source_dataset": [
+        {
+          "path": "nq/dev.json",
+          "sha256": "46655b6fb9aaeffecbf094806957da93e893ca512184fd6804cbf26b142e6c0b",
+          "source": {
+            "url": "https://dl.fbaipublicfiles.com/dpr/data/nq_gold_info/nq-dev_gold_info.json.gz",
+            "revision": "gzip-sha256:38e6ddeaf3918c99e2be920fd51aa587182a949ead4f8aec200f1999c8231df2",
+            "license": "NQ annotation license: Apache-2.0; Wikipedia evidence text: CC BY-SA",
+            "source_split": "DPR nq-dev gold info (not Google hidden test)",
+            "compressed_sha256": "38e6ddeaf3918c99e2be920fd51aa587182a949ead4f8aec200f1999c8231df2",
+            "schema": "data[]: example_id/question/short_answers/context/title/doc_url",
+            "sha256": "46655b6fb9aaeffecbf094806957da93e893ca512184fd6804cbf26b142e6c0b",
+            "downloaded_at_utc": "2026-11-01T06:48:20.318638+00:00"
+          }
+        },
+        {
+          "path": "nq/train.json",
+          "sha256": "aa34940d10fde3aada76fdebca5ff2a27ef6c4967a2109c02708d2c421a32129",
+          "source": {
+            "url": "https://dl.fbaipublicfiles.com/dpr/data/nq_gold_info/nq-train_gold_info.json.gz",
+            "revision": "gzip-sha256:b1a42d917a288ab330ee1ae4387efccbf6abba74d0da14e14a5ac38ff72d9ec8",
+            "license": "NQ annotation license: Apache-2.0; Wikipedia evidence text: CC BY-SA",
+            "source_split": "DPR nq-train gold info (not Google hidden test)",
+            "compressed_sha256": "b1a42d917a288ab330ee1ae4387efccbf6abba74d0da14e14a5ac38ff72d9ec8",
+            "schema": "data[]: example_id/question/short_answers/context/title/doc_url",
+            "sha256": "aa34940d10fde3aada76fdebca5ff2a27ef6c4967a2109c02708d2c421a32129",
+            "downloaded_at_utc": "2026-11-01T06:48:18.146428+00:00"
+          }
+        }
+      ],
+      "mapping_method": "gold_ctx_id | verified_normalized_token_containment_v1",
+      "title_normalization": "HTML unescape; Unicode NFKC; casefold; underscores to spaces; collapse whitespace; preserve punctuation"
+    }
+  },
+  "files": {
+    "train.jsonl": {
+      "rows": 9000,
+      "sha256": "91a63ca2e7ddec394a846accf1f323b30ba16f07c439c5a5dec01aa56e2e82ce",
+      "mapped_rows": 6374,
+      "unmapped_rows": 2626
+    },
+    "dev.jsonl": {
+      "rows": 21249,
+      "sha256": "21bace7f8301eb69d17281e74e22b70babd060ba0b6de2feb41b55a49c90a5d9",
+      "mapped_rows": 21249,
+      "unmapped_rows": 0
+    },
+    "train_mapped.jsonl": {
+      "rows": 6374,
+      "sha256": "6d78d3ac132bf7df73520d46604fa72fef973c035f90b8950dad5c07cb632f9f",
+      "mapped_rows": 6374,
+      "unmapped_rows": 0
+    }
+  },
+  "source_inventory": {
+    "raw_root": "D:\\FPTU\\FPTU-SP26-CaptonesProject\\grasp-gold-evidence-builder\\raw",
+    "files": [
+      {
+        "path": "2wiki/dev.json",
+        "sha256": "48b9bdc69654dc580fda5f935a48b88cb89f11887587310af60d406c8d0111a6",
+        "bytes": 55934464,
+        "rows": 12576,
+        "observed_top_level_keys": [
+          "_id",
+          "answer",
+          "context",
+          "evidences",
+          "question",
+          "supporting_facts",
+          "type"
+        ],
+        "source": {
+          "url": "https://www.dropbox.com/s/npidmtadreo6df2/data.zip?dl=1",
+          "revision": "archive-sha256:e8e57c0aafc4a26d41131e320ebb5afb6f2aca86b8a6e6611b08f52033cb7d04",
+          "license": "See official 2WikiMultiHopQA dataset terms",
+          "source_split": "dev",
+          "archive_member": "data/dev.json",
+          "archive_sha256": "e8e57c0aafc4a26d41131e320ebb5afb6f2aca86b8a6e6611b08f52033cb7d04",
+          "sha256": "48b9bdc69654dc580fda5f935a48b88cb89f11887587310af60d406c8d0111a6",
+          "downloaded_at_utc": "2026-11-01T06:16:08.869800+00:00"
+        },
+        "read_error": null
+      },
+      {
+        "path": "2wiki/train.json",
+        "sha256": "b3fddb4d5bb42cd797919cad67616545be51b24740e0a7dabdae7bf76b8f7bfa",
+        "bytes": 681705246,
+        "rows": 167454,
+        "observed_top_level_keys": [
+          "_id",
+          "answer",
+          "context",
+          "evidences",
+          "question",
+          "supporting_facts",
+          "type"
+        ],
+        "source": {
+          "url": "https://www.dropbox.com/s/npidmtadreo6df2/data.zip?dl=1",
+          "revision": "archive-sha256:e8e57c0aafc4a26d41131e320ebb5afb6f2aca86b8a6e6611b08f52033cb7d04",
+          "license": "See official 2WikiMultiHopQA dataset terms",
+          "source_split": "train",
+          "archive_member": "data/train.json",
+          "archive_sha256": "e8e57c0aafc4a26d41131e320ebb5afb6f2aca86b8a6e6611b08f52033cb7d04",
+          "sha256": "b3fddb4d5bb42cd797919cad67616545be51b24740e0a7dabdae7bf76b8f7bfa",
+          "downloaded_at_utc": "2026-11-01T06:16:08.564870+00:00"
+        },
+        "read_error": null
+      },
+      {
+        "path": "hotpotqa/dev.json",
+        "sha256": "a5eb3877b9ae19ae2d9800c3bf0481d779b7a24756dc6fc204a4178d550cfc94",
+        "bytes": 46178685,
+        "rows": 7405,
+        "observed_top_level_keys": [
+          "_id",
+          "answer",
+          "context",
+          "question",
+          "supporting_facts"
+        ],
+        "source": {
+          "url": "https://huggingface.co/datasets/hotpotqa/hotpot_qa",
+          "revision": "1908d6afbbead072334abe2965f91bd2709910ab",
+          "license": "CC BY-SA 4.0",
+          "source_split": "validation",
+          "rows": 7405,
+          "downloaded_artifacts": [
+            {
+              "url": "https://huggingface.co/datasets/hotpotqa/hotpot_qa/resolve/1908d6afbbead072334abe2965f91bd2709910ab/distractor/validation-00000-of-00001.parquet",
+              "sha256": "c20b638ca82b21d04fe12e14ff417ad05153d4d215a65de54497fca4e972f7c6"
+            }
+          ],
+          "transformation": "Parquet to official JSON schema; preserve original supporting facts",
+          "sha256": "a5eb3877b9ae19ae2d9800c3bf0481d779b7a24756dc6fc204a4178d550cfc94",
+          "downloaded_at_utc": "2026-11-01T06:15:48.171478+00:00"
+        },
+        "read_error": null
+      },
+      {
+        "path": "hotpotqa/train.json",
+        "sha256": "a1953d547f02d9dba6850104215c0d9af880d691e83f33c3dab5b74b1afa1606",
+        "bytes": 558614463,
+        "rows": 90447,
+        "observed_top_level_keys": [
+          "_id",
+          "answer",
+          "context",
+          "question",
+          "supporting_facts"
+        ],
+        "source": {
+          "url": "https://huggingface.co/datasets/hotpotqa/hotpot_qa",
+          "revision": "1908d6afbbead072334abe2965f91bd2709910ab",
+          "license": "CC BY-SA 4.0",
+          "source_split": "train",
+          "rows": 90447,
+          "downloaded_artifacts": [
+            {
+              "url": "https://huggingface.co/datasets/hotpotqa/hotpot_qa/resolve/1908d6afbbead072334abe2965f91bd2709910ab/distractor/train-00000-of-00002.parquet",
+              "sha256": "76d3bb3048a7cc73c1958107c0c5872a00d7e7d00c105b81e92f6769e7822e68"
+            },
+            {
+              "url": "https://huggingface.co/datasets/hotpotqa/hotpot_qa/resolve/1908d6afbbead072334abe2965f91bd2709910ab/distractor/train-00001-of-00002.parquet",
+              "sha256": "713661628434fbb19fff7392e2e321e4ed107e3c7c7784d0690946e5f722763f"
+            }
+          ],
+          "transformation": "Parquet to official JSON schema; preserve original supporting facts",
+          "sha256": "a1953d547f02d9dba6850104215c0d9af880d691e83f33c3dab5b74b1afa1606",
+          "downloaded_at_utc": "2026-11-01T06:15:45.114894+00:00"
+        },
+        "read_error": null
+      },
+      {
+        "path": "nq/dev.json",
+        "sha256": "46655b6fb9aaeffecbf094806957da93e893ca512184fd6804cbf26b142e6c0b",
+        "bytes": 14991160,
+        "rows": 8757,
+        "observed_top_level_keys": [
+          "context",
+          "doc_url",
+          "example_id",
+          "question",
+          "question_tokens",
+          "short_answers",
+          "title"
+        ],
+        "source": {
+          "url": "https://dl.fbaipublicfiles.com/dpr/data/nq_gold_info/nq-dev_gold_info.json.gz",
+          "revision": "gzip-sha256:38e6ddeaf3918c99e2be920fd51aa587182a949ead4f8aec200f1999c8231df2",
+          "license": "NQ annotation license: Apache-2.0; Wikipedia evidence text: CC BY-SA",
+          "source_split": "DPR nq-dev gold info (not Google hidden test)",
+          "compressed_sha256": "38e6ddeaf3918c99e2be920fd51aa587182a949ead4f8aec200f1999c8231df2",
+          "schema": "data[]: example_id/question/short_answers/context/title/doc_url",
+          "sha256": "46655b6fb9aaeffecbf094806957da93e893ca512184fd6804cbf26b142e6c0b",
+          "downloaded_at_utc": "2026-11-01T06:48:20.318638+00:00"
+        },
+        "read_error": null
+      },
+      {
+        "path": "nq/train.json",
+        "sha256": "aa34940d10fde3aada76fdebca5ff2a27ef6c4967a2109c02708d2c421a32129",
+        "bytes": 137035464,
+        "rows": 79168,
+        "observed_top_level_keys": [
+          "context",
+          "doc_url",
+          "example_id",
+          "question",
+          "question_tokens",
+          "short_answers",
+          "title"
+        ],
+        "source": {
+          "url": "https://dl.fbaipublicfiles.com/dpr/data/nq_gold_info/nq-train_gold_info.json.gz",
+          "revision": "gzip-sha256:b1a42d917a288ab330ee1ae4387efccbf6abba74d0da14e14a5ac38ff72d9ec8",
+          "license": "NQ annotation license: Apache-2.0; Wikipedia evidence text: CC BY-SA",
+          "source_split": "DPR nq-train gold info (not Google hidden test)",
+          "compressed_sha256": "b1a42d917a288ab330ee1ae4387efccbf6abba74d0da14e14a5ac38ff72d9ec8",
+          "schema": "data[]: example_id/question/short_answers/context/title/doc_url",
+          "sha256": "aa34940d10fde3aada76fdebca5ff2a27ef6c4967a2109c02708d2c421a32129",
+          "downloaded_at_utc": "2026-11-01T06:48:18.146428+00:00"
+        },
+        "read_error": null
+      }
+    ]
+  },
+  "evidence_status_policy": "mapped requires verified gold_doc_ids; unmapped has no gold_doc_ids and recall is unavailable",
+  "recall_train_file": "train_mapped.jsonl",
+  "reports": {
+    "reports/train_mapping_report.json": {
+      "sha256": "31ca262a1b83796e1f4aa5116301c6a47d5943065db6b4ab88794717ba9ae9df"
+    },
+    "reports/dev_mapping_report.json": {
+      "sha256": "5c391dc9a21d9059010d282ab9da49d291b690e834dbeea6a19db24863fecd5a"
+    },
+    "reports/validation_report.json": {
+      "sha256": "37a063ff6b39dc7710895f9a2dd7da352f35f18aa2ffde551a276e40977d827f"
+    },
+    "reports/nq_alignment_report.json": {
+      "sha256": "b6ba537b30407380e867dc346f4937ade56063c53daa181e45470808e2b8e226"
+    }
+  }
+}

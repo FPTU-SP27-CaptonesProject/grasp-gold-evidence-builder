@@ -52,12 +52,19 @@ def test_build_and_package_without_other_repositories(tmp_path):
     assert len(rows) == 4 and rows[1]["evidence_status"] == "unmapped"
     assert read_records(output / "train_mapped.jsonl") == [row for row in rows if row["evidence_status"] == "mapped"]
     archive = tmp_path / "handoff.zip"
-    package_main(["--evidence-dir", str(output), "--output", str(archive)])
+    git_output = tmp_path / "outputs/grasp-gold-evidence"
+    package_main(["--evidence-dir", str(output), "--output", str(archive), "--git-output-dir", str(git_output)])
     with zipfile.ZipFile(archive) as package:
         assert package.testzip() is None
         assert len(package.namelist()) == 10
         assert all(name.startswith("data/grasp-gold-evidence/") for name in package.namelist())
         assert package.read("data/grasp-gold-evidence/train.jsonl") == (output / "train.jsonl").read_bytes()
+        for name in package.namelist():
+            relative = name.removeprefix("data/grasp-gold-evidence/")
+            assert (git_output / relative).read_bytes() == package.read(name)
+    assert len(list(git_output.rglob("*.jsonl"))) == 3
+    assert not (git_output / "nq-aligned").exists()
+    assert not (git_output / "corpora.local.json").exists()
     # Repackaging unchanged artifacts must not invalidate an already bound smoke gate.
     manifest_hash = sha256(output / "manifest.json")
     package_main(["--evidence-dir", str(output), "--output", str(archive)])

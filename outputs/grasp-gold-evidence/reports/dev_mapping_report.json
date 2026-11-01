@@ -1,0 +1,478 @@
+{
+  "split": "dev",
+  "rows_written": 21249,
+  "sources": {
+    "2wiki_ircot": {
+      "path": "D:\\FPTU\\FPTU-SP26-CaptonesProject\\grasp-gold-evidence-builder\\raw\\2wiki\\dev.json",
+      "sha256": "48b9bdc69654dc580fda5f935a48b88cb89f11887587310af60d406c8d0111a6",
+      "rows": 12576
+    },
+    "hotpotqa_abstracts_2017": {
+      "path": "D:\\FPTU\\FPTU-SP26-CaptonesProject\\grasp-gold-evidence-builder\\raw\\hotpotqa\\dev.json",
+      "sha256": "a5eb3877b9ae19ae2d9800c3bf0481d779b7a24756dc6fc204a4178d550cfc94",
+      "rows": 7405
+    },
+    "wiki18": {
+      "path": "D:\\FPTU\\FPTU-SP26-CaptonesProject\\grasp-gold-evidence-builder\\work\\exact-grpo\\nq-aligned\\dev.json",
+      "sha256": "c2ae607ce5dfd59c7bbeb9609631cb6861434c5ea0f018308a483a36a3a6eb2e",
+      "rows": 1313
+    }
+  },
+  "unmapped_source_rows": {
+    "2wiki_ircot": [
+      {
+        "source_id": "8cb79c16085a11ebbd5cac1f6bf848b6",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "e39dc22e095f11ebbdafac1f6bf848b6",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "a879a14b092111ebbdaeac1f6bf848b6",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "f3a16239088011ebbd6dac1f6bf848b6",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "b728e70c094411ebbdaeac1f6bf848b6",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "9ba59c1a0bdd11eba7f7acde48001122",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "00199e40098211ebbdb0ac1f6bf848b6",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "d1aa7f57087e11ebbd6bac1f6bf848b6",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "afc5b57c0bdd11eba7f7acde48001122",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "43b55fee087311ebbd66ac1f6bf848b6",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "033eede808c011ebbd8aac1f6bf848b6",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "e4441eb408a511ebbd7dac1f6bf848b6",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "cfa6c685088a11ebbd6fac1f6bf848b6",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "cd08820a0baf11ebab90acde48001122",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "16b5529e085d11ebbd5cac1f6bf848b6",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "83d15c08085b11ebbd5cac1f6bf848b6",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "59acfe98096c11ebbdafac1f6bf848b6",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "9d6c6c5c087e11ebbd6bac1f6bf848b6",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "e2e9a9560bdb11eba7f7acde48001122",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "2b6af57408b511ebbd88ac1f6bf848b6",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "f5acb304087e11ebbd6bac1f6bf848b6",
+        "status": "ambiguous_supporting_title"
+      }
+    ],
+    "hotpotqa_abstracts_2017": [
+      {
+        "source_id": "5a8ec7cc5542995a26add518",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "5a7a36e65542990198eaf0ea",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "5ab5f9a0554299488d4d9a6d",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "5abeb3525542993fe9a41d03",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "5a729fa15542994cef4bc397",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "5a84b7db5542991dd0999db0",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "5a8b83bc55429949d91db5c0",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "5adf82945542993344016ca4",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "5a8f186055429918e830d186",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "5a72f3a85542992359bc31e5",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "5ab3b42c5542992ade7c6e4f",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "5a74e5aa5542996c70cfae2e",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "5a7613c15542994ccc9186bf",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "5abdf06355429976d4830a2d",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "5abd72475542993062266c9a",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "5a74adb455429916b01641c6",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "5a85bc2d5542994c784ddb70",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "5ae274dd5542996483e649ad",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "5abc7bc45542993a06baf8ef",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "5a71231a5542994082a3e5c4",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "5ae1ab2f554299234fd042ba",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "5abc7bf5554299114383a129",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "5ae322b75542994393b9e622",
+        "status": "ambiguous_supporting_title"
+      },
+      {
+        "source_id": "5ae4be5455429960a22e019c",
+        "status": "ambiguous_supporting_title"
+      }
+    ]
+  },
+  "datasets": {
+    "2wiki_ircot": {
+      "input": 12576,
+      "mapped": 12555,
+      "gold_doc_count": 30592,
+      "ambiguous_supporting_title": 21,
+      "mean_gold_doc_count": 2.4366387893269614,
+      "examples_not_written": [
+        {
+          "source_row": "478",
+          "source_id": "8cb79c16085a11ebbd5cac1f6bf848b6",
+          "status": "ambiguous_supporting_title",
+          "question": "Which film has the director who was born earlier, Red Sparrow or The Flying Liftboy?"
+        },
+        {
+          "source_row": "1063",
+          "source_id": "e39dc22e095f11ebbdafac1f6bf848b6",
+          "status": "ambiguous_supporting_title",
+          "question": "Which film was released first, Insaaniyat or Five Of A Kind?"
+        },
+        {
+          "source_row": "2226",
+          "source_id": "a879a14b092111ebbdaeac1f6bf848b6",
+          "status": "ambiguous_supporting_title",
+          "question": "Which film came out first, School Spirit or The Chekist?"
+        },
+        {
+          "source_row": "2604",
+          "source_id": "f3a16239088011ebbd6dac1f6bf848b6",
+          "status": "ambiguous_supporting_title",
+          "question": "Which film whose director was born first, Tree Without Fruit or Small Town Boy?"
+        },
+        {
+          "source_row": "2996",
+          "source_id": "b728e70c094411ebbdaeac1f6bf848b6",
+          "status": "ambiguous_supporting_title",
+          "question": "Which film was released first, All Over The Guy or Dead Man?"
+        },
+        {
+          "source_row": "3188",
+          "source_id": "9ba59c1a0bdd11eba7f7acde48001122",
+          "status": "ambiguous_supporting_title",
+          "question": "What is the place of birth of the director of film Small Town Boy?"
+        },
+        {
+          "source_row": "4011",
+          "source_id": "00199e40098211ebbdb0ac1f6bf848b6",
+          "status": "ambiguous_supporting_title",
+          "question": "Did the movies Cock Of The Roost and Nobody'S Perfect, originate from the same country?"
+        },
+        {
+          "source_row": "5447",
+          "source_id": "d1aa7f57087e11ebbd6bac1f6bf848b6",
+          "status": "ambiguous_supporting_title",
+          "question": "Which film was released more recently, Two Wrongs Make A Right or Cheluva?"
+        },
+        {
+          "source_row": "5574",
+          "source_id": "afc5b57c0bdd11eba7f7acde48001122",
+          "status": "ambiguous_supporting_title",
+          "question": "Where did Crow Foot's father die?"
+        },
+        {
+          "source_row": "5875",
+          "source_id": "43b55fee087311ebbd66ac1f6bf848b6",
+          "status": "ambiguous_supporting_title",
+          "question": "Are both Uzeb and Honeymoon Suite from the same country?"
+        },
+        {
+          "source_row": "6886",
+          "source_id": "033eede808c011ebbd8aac1f6bf848b6",
+          "status": "ambiguous_supporting_title",
+          "question": "Which film has the director born earlier, Tlayucan or Spaceways?"
+        },
+        {
+          "source_row": "7496",
+          "source_id": "e4441eb408a511ebbd7dac1f6bf848b6",
+          "status": "ambiguous_supporting_title",
+          "question": "Which film has the director who was born first, Las Fuerzas Vivas or Polly Of The Storm Country?"
+        },
+        {
+          "source_row": "7499",
+          "source_id": "cfa6c685088a11ebbd6fac1f6bf848b6",
+          "status": "ambiguous_supporting_title",
+          "question": "Which film has the director died earlier, Carnal Circuit or Small Town Boy?"
+        },
+        {
+          "source_row": "7501",
+          "source_id": "cd08820a0baf11ebab90acde48001122",
+          "status": "ambiguous_supporting_title",
+          "question": "Who is the paternal grandfather of Mihr-Un-Nissa Begum?"
+        },
+        {
+          "source_row": "8172",
+          "source_id": "16b5529e085d11ebbd5cac1f6bf848b6",
+          "status": "ambiguous_supporting_title",
+          "question": "Which film has the director who is older than the other, Woman Doctor or Det Drønner Gjennom Dalen?"
+        },
+        {
+          "source_row": "8332",
+          "source_id": "83d15c08085b11ebbd5cac1f6bf848b6",
+          "status": "ambiguous_supporting_title",
+          "question": "Which film whose director is younger, Back To School or Bitter Moon?"
+        },
+        {
+          "source_row": "8650",
+          "source_id": "59acfe98096c11ebbdafac1f6bf848b6",
+          "status": "ambiguous_supporting_title",
+          "question": "Which film has more directors, Little Black Book or Bombay Calling?"
+        },
+        {
+          "source_row": "10018",
+          "source_id": "9d6c6c5c087e11ebbd6bac1f6bf848b6",
+          "status": "ambiguous_supporting_title",
+          "question": "Which film has the director born later, That'S Cricket or All Is True?"
+        },
+        {
+          "source_row": "10943",
+          "source_id": "e2e9a9560bdb11eba7f7acde48001122",
+          "status": "ambiguous_supporting_title",
+          "question": "Where was the place of death of the director of film Small Town Boy?"
+        },
+        {
+          "source_row": "11429",
+          "source_id": "2b6af57408b511ebbd88ac1f6bf848b6",
+          "status": "ambiguous_supporting_title",
+          "question": "Which film has the director who died later, You'Re On Your Own or Terror At Tenkiller?"
+        }
+      ]
+    },
+    "hotpotqa_abstracts_2017": {
+      "input": 7405,
+      "mapped": 7381,
+      "gold_doc_count": 14762,
+      "ambiguous_supporting_title": 24,
+      "mean_gold_doc_count": 2.0,
+      "examples_not_written": [
+        {
+          "source_row": "754",
+          "source_id": "5a8ec7cc5542995a26add518",
+          "status": "ambiguous_supporting_title",
+          "question": "Which was published more frequently, Popular Science or Girlfriends?"
+        },
+        {
+          "source_row": "1622",
+          "source_id": "5a7a36e65542990198eaf0ea",
+          "status": "ambiguous_supporting_title",
+          "question": "When was the creator of Bully Boy born?"
+        },
+        {
+          "source_row": "1648",
+          "source_id": "5ab5f9a0554299488d4d9a6d",
+          "status": "ambiguous_supporting_title",
+          "question": "What was the rank of the leader of the army defeated by West Saxon forces?"
+        },
+        {
+          "source_row": "1767",
+          "source_id": "5abeb3525542993fe9a41d03",
+          "status": "ambiguous_supporting_title",
+          "question": "Which community did Otto Gross join which includes the popular destination Monte Verita?"
+        },
+        {
+          "source_row": "1901",
+          "source_id": "5a729fa15542994cef4bc397",
+          "status": "ambiguous_supporting_title",
+          "question": "Which movie came out first, \"Bambi\" or \"Underdog\"?"
+        },
+        {
+          "source_row": "2282",
+          "source_id": "5a84b7db5542991dd0999db0",
+          "status": "ambiguous_supporting_title",
+          "question": "Are both Götterdämmerung and Dafne considered operas?"
+        },
+        {
+          "source_row": "2332",
+          "source_id": "5a8b83bc55429949d91db5c0",
+          "status": "ambiguous_supporting_title",
+          "question": "Bandit was built in 1988 by which Japanese amusement ride company that built roller coasters, giant wheels, carousels, flumes, dark rides, sky cycles and other amusement rides?"
+        },
+        {
+          "source_row": "2728",
+          "source_id": "5adf82945542993344016ca4",
+          "status": "ambiguous_supporting_title",
+          "question": "What profession did Alan Crosland and Kurt Voss both hold?"
+        },
+        {
+          "source_row": "2890",
+          "source_id": "5a8f186055429918e830d186",
+          "status": "ambiguous_supporting_title",
+          "question": "What is one of the most successful retro-clones that is no longer supported by Wizards of the Coast?"
+        },
+        {
+          "source_row": "3033",
+          "source_id": "5a72f3a85542992359bc31e5",
+          "status": "ambiguous_supporting_title",
+          "question": "The large subunit and small subunit that use two types of RNA are major components that make up what?"
+        },
+        {
+          "source_row": "4102",
+          "source_id": "5ab3b42c5542992ade7c6e4f",
+          "status": "ambiguous_supporting_title",
+          "question": "What city did the musician whose debut album shares its title with the 1959 Alfred Hitchcock hail from?"
+        },
+        {
+          "source_row": "4262",
+          "source_id": "5a74e5aa5542996c70cfae2e",
+          "status": "ambiguous_supporting_title",
+          "question": "Which cloth town in the high Middle Ages gives the name to the dye associated with the man who is said to rob from the rich and give to the poor?"
+        },
+        {
+          "source_row": "4367",
+          "source_id": "5a7613c15542994ccc9186bf",
+          "status": "ambiguous_supporting_title",
+          "question": "VIVA Media AG changed it's name in 2004. What does their new acronym stand for?"
+        },
+        {
+          "source_row": "4646",
+          "source_id": "5abdf06355429976d4830a2d",
+          "status": "ambiguous_supporting_title",
+          "question": "In Ancient Egyptian religion how would a citizen be weighted to decide if they where worthy of damnation and would face the torment in the lake of fire ?"
+        },
+        {
+          "source_row": "4895",
+          "source_id": "5abd72475542993062266c9a",
+          "status": "ambiguous_supporting_title",
+          "question": "Are After Midnight Project and Aaroh both rock bands?"
+        },
+        {
+          "source_row": "5353",
+          "source_id": "5a74adb455429916b01641c6",
+          "status": "ambiguous_supporting_title",
+          "question": "Which occurred first, the first publication of The Ladder or Heat?"
+        },
+        {
+          "source_row": "5402",
+          "source_id": "5a85bc2d5542994c784ddb70",
+          "status": "ambiguous_supporting_title",
+          "question": "\"It Girl\" is musically classified in the middle of what terminology describing the speed or pace of a given piece?"
+        },
+        {
+          "source_row": "5739",
+          "source_id": "5ae274dd5542996483e649ad",
+          "status": "ambiguous_supporting_title",
+          "question": "Jet Airways is the second largest airlien after a low cost airline located in which city ?"
+        },
+        {
+          "source_row": "5907",
+          "source_id": "5abc7bc45542993a06baf8ef",
+          "status": "ambiguous_supporting_title",
+          "question": "Which as more species Cassiope or Deutzia?"
+        },
+        {
+          "source_row": "5972",
+          "source_id": "5a71231a5542994082a3e5c4",
+          "status": "ambiguous_supporting_title",
+          "question": "What edible, juicy fruit is grown on a deciduous tree called 'pesco' in Italian?"
+        }
+      ]
+    },
+    "wiki18": {
+      "input": 1313,
+      "mapped": 1313,
+      "gold_doc_count": 1365,
+      "mean_gold_doc_count": 1.0396039603960396,
+      "examples_not_written": []
+    }
+  },
+  "missing_sources": [],
+  "question_join": {},
+  "input_mode": "all_source_questions",
+  "qa_inputs": []
+}

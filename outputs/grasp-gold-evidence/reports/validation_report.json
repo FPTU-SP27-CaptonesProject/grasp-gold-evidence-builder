@@ -1,0 +1,41 @@
+{
+  "valid": true,
+  "rows": 30249,
+  "invalid_doc_ids": 0,
+  "mapped_rows": 27623,
+  "unmapped_rows": 2626,
+  "invalid_rows": 0,
+  "error_count": 0,
+  "files": {
+    "train.jsonl": {
+      "sha256": "91a63ca2e7ddec394a846accf1f323b30ba16f07c439c5a5dec01aa56e2e82ce"
+    },
+    "dev.jsonl": {
+      "sha256": "21bace7f8301eb69d17281e74e22b70babd060ba0b6de2feb41b55a49c90a5d9"
+    }
+  },
+  "datasets": {
+    "2wiki_ircot": {
+      "rows": 15555,
+      "mapped": 15551,
+      "valid_doc_ids": 37854,
+      "invalid_doc_ids": 0,
+      "unmapped": 4
+    },
+    "hotpotqa_abstracts_2017": {
+      "rows": 10381,
+      "mapped": 10374,
+      "valid_doc_ids": 20748,
+      "invalid_doc_ids": 0,
+      "unmapped": 7
+    },
+    "wiki18": {
+      "rows": 4313,
+      "unmapped": 2615,
+      "valid_doc_ids": 1763,
+      "invalid_doc_ids": 0,
+      "mapped": 1698
+    }
+  },
+  "errors": []
+}

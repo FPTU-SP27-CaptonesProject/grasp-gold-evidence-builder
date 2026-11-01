@@ -11,7 +11,11 @@ source .venv/bin/activate
 python -m pip install -e '.[download]'
 ```
 
-Yêu cầu Python >=3.11. Git clone chỉ có code; `raw/`, `work/`, data và ZIP không được push.
+Yêu cầu Python >=3.11. Repo có code và snapshot QA/báo cáo trong `outputs/grasp-gold-evidence/`
+khi đã commit output. `raw/`, `work/`, corpus, checkpoint và ZIP vẫn không được push.
+
+Nếu dùng luôn snapshot đã commit, không cần build lại: copy `outputs/grasp-gold-evidence/`
+vào `/workspace/data/` trên máy trainer. Các bước tiếp theo dành cho việc tạo lại evidence.
 
 ## 2. Đưa input lên máy
 
@@ -61,12 +65,20 @@ Validation phải có `valid=true`, `invalid_doc_ids=0`, `invalid_rows=0`.
 ## 5. Đóng ZIP và bàn giao
 
 ```bash
-grasp-gold-package --evidence-dir work/exact-grpo
+grasp-gold-package --evidence-dir work/exact-grpo --git-output-dir outputs/grasp-gold-evidence
 ```
 
 Tải về `work/handoff/grasp-gold-evidence-v1.zip`. Gói chứa QA, manifest, README và các báo cáo;
 không chứa raw annotations, model, SQLite, FAISS hay code trainer.
 Giải nén vào `/workspace` trên máy trainer để có `/workspace/data/grasp-gold-evidence/`.
+
+Lệnh trên cũng tạo snapshot `outputs/grasp-gold-evidence/` để commit lên GitHub. Sau khi push,
+clone repo sẽ có QA/báo cáo ngay; có thể dùng snapshot này thay cho upload ZIP:
+
+```bash
+mkdir -p /workspace/data
+cp -a outputs/grasp-gold-evidence /workspace/data/
+```
 
 Trainer dùng `train_mapped.jsonl` cho reward có recall; `train.jsonl` đầy đủ dùng để bàn giao và
 tiếp tục bổ sung mapping. Thiếu nhãn evidence nghĩa là chưa chấm được recall, không phải recall=0.

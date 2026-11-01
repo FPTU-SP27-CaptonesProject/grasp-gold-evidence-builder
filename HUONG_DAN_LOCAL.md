@@ -66,7 +66,17 @@ và `validation_report.json`; yêu cầu `valid=true`, `invalid_doc_ids=0`.
 
 ## Đưa lên Vast
 
-Theo cách dùng GitHub: push repo `grasp-grpo-trainer`, clone trên Vast rồi chỉ upload gói dữ liệu
+Output được phép push nằm ở `outputs/grasp-gold-evidence/`, gồm ba JSONL, manifest, README,
+source inventory và bốn báo cáo. `work/` vẫn là thư mục làm việc và được bỏ qua.
+Sau mỗi lần build, chạy `grasp-gold-package --git-output-dir outputs/grasp-gold-evidence` để
+cập nhật snapshot rồi commit. Clone repo trên Vast sẽ có snapshot này, không cần upload ZIP:
+
+```bash
+mkdir -p /workspace/data
+cp -a outputs/grasp-gold-evidence /workspace/data/
+```
+
+Nếu dùng cách chuyển ZIP: push repo `grasp-grpo-trainer`, clone trên Vast rồi upload gói dữ liệu
 `work/handoff/grasp-gold-evidence-v1.zip`. Giải nén ZIP này vào `/workspace` để tạo
 `/workspace/data/grasp-gold-evidence/`. Gói chứa canonical QA và reports; không chứa code/model/index.
 Đọc `../grasp-grpo-trainer/RUN_VAST_EVIDENCE_V2.md` để clone vào thư mục mới, cấu hình reader,

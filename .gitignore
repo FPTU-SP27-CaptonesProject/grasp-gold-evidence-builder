@@ -11,7 +11,22 @@ venv/
 !.env.example
 config/*.env
 data/
-outputs/
+# Track only the reviewed canonical handoff, not arbitrary generated outputs.
+/outputs/*
+!/outputs/grasp-gold-evidence/
+/outputs/grasp-gold-evidence/*
+!/outputs/grasp-gold-evidence/train.jsonl
+!/outputs/grasp-gold-evidence/train_mapped.jsonl
+!/outputs/grasp-gold-evidence/dev.jsonl
+!/outputs/grasp-gold-evidence/manifest.json
+!/outputs/grasp-gold-evidence/source_inventory.json
+!/outputs/grasp-gold-evidence/README.md
+!/outputs/grasp-gold-evidence/reports/
+/outputs/grasp-gold-evidence/reports/*
+!/outputs/grasp-gold-evidence/reports/train_mapping_report.json
+!/outputs/grasp-gold-evidence/reports/dev_mapping_report.json
+!/outputs/grasp-gold-evidence/reports/validation_report.json
+!/outputs/grasp-gold-evidence/reports/nq_alignment_report.json
 build/
 dist/
 raw/

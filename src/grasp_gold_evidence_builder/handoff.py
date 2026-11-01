@@ -92,9 +92,10 @@ DPR: https://github.com/facebookresearch/DPR/blob/main/dpr/data/download_data.py
 Wikipedia-derived material retains the original attribution/share-alike requirements.
 This package supplies QA labels and reports; it does not duplicate the retrieval corpus.
 
-Canonical validation passed. Real SFT rollout smoke (30 questions/corpus, nonzero context recall
-and reward variance) is still required before publication or primary GRPO. Package before smoke;
-changing the manifest afterwards invalidates its hash binding. A local preflight is not rollout smoke.
+Release candidate: canonical data validation passed; real SFT rollout smoke is pending.
+Run smoke (30 questions/corpus, nonzero context recall and reward variance) before primary GRPO.
+Package before smoke; changing the manifest afterwards invalidates its hash binding.
+Local preflight and data validation are separate checks from the real model rollout gate.
 '''
     (evidence / "README.md").write_text(card, encoding="utf-8")
     return [evidence / name for name in DATA_FILES] + [evidence / "reports" / name for name in REPORT_FILES]
@@ -131,12 +132,27 @@ def write_archive(output: Path, evidence: Path, files: list[Path], trainer: Path
     temporary.replace(output)
 
 
+def export_evidence(evidence: Path, files: list[Path], destination: Path) -> None:
+    """Copy only canonical artifacts, byte for byte, into a Git-tracked handoff directory."""
+    if destination.resolve() == evidence.resolve():
+        raise ValueError("Git output directory must differ from the working evidence directory")
+    for source in files:
+        target = destination / source.relative_to(evidence)
+        target.parent.mkdir(parents=True, exist_ok=True)
+        temporary = target.with_suffix(target.suffix + ".tmp")
+        shutil.copyfile(source, temporary)
+        temporary.replace(target)
+        if sha256(source) != sha256(target):
+            raise ValueError(f"export SHA256 mismatch: {target}")
+
+
 def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--evidence-dir", default="work/exact-grpo")
     parser.add_argument("--nq-report", help="Defaults to this evidence directory's nq-aligned or staged reports")
     parser.add_argument("--trainer-dir", help="Optional trainer clone to include in a combined archive")
     parser.add_argument("--output", help="Defaults to a data-only ZIP; combined ZIP when --trainer-dir is supplied")
+    parser.add_argument("--git-output-dir", help="Also export canonical QA/reports for Git, e.g. outputs/grasp-gold-evidence")
     args = parser.parse_args(argv)
     trainer = Path(args.trainer_dir).resolve() if args.trainer_dir else None
     if trainer:
@@ -147,7 +163,10 @@ def main(argv: list[str] | None = None) -> None:
     evidence = Path(args.evidence_dir).resolve()
     files = prepare_evidence(evidence, Path(args.nq_report) if args.nq_report else None)
     write_archive(output, evidence, files, trainer)
+    if args.git_output_dir:
+        export_evidence(evidence, files, Path(args.git_output_dir))
     print(json.dumps({"archive": str(output.resolve()), "bytes": output.stat().st_size,
+                      "git_output_dir": str(Path(args.git_output_dir).resolve()) if args.git_output_dir else None,
                       "includes_trainer": bool(trainer), "status": "prepared; real SFT rollout smoke still required"}))
 
 

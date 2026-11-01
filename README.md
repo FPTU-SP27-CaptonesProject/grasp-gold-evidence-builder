@@ -117,5 +117,43 @@ grasp-gold-package --trainer-dir ../grasp-grpo-trainer --output work/handoff/gra
 
 Run packaging before the real SFT smoke gate (30 questions/corpus); it stages report hashes into
 the manifest. Preserve the successful gate before publication/primary GRPO. Unchanged repackaging
-preserves the manifest hash. Git ignores raw sources, output QA, archives, indexes, credentials and
-Python environments; transfer data separately. To verify code: `python -m pytest` and `ruff check .`.
+preserves the manifest hash. Git ignores raw sources, working artifacts, archives, indexes,
+credentials and Python environments. To verify code: `python -m pytest` and `ruff check .`.
+
+## Include canonical output in GitHub
+
+```bash
+grasp-gold-package --git-output-dir outputs/grasp-gold-evidence
+```
+
+This exports the reviewed snapshot into a Git-tracked directory:
+
+```text
+outputs/grasp-gold-evidence/
+  train.jsonl
+  train_mapped.jsonl
+  dev.jsonl
+  manifest.json
+  source_inventory.json
+  README.md
+  reports/
+    train_mapping_report.json
+    dev_mapping_report.json
+    validation_report.json
+    nq_alignment_report.json
+```
+
+The current snapshot totals about 19 MB; each file is under 7 MB. `work/` remains ignored;
+re-run the export command after rebuilding to refresh the snapshot. `.gitattributes` preserves
+these artifact bytes so manifest SHA256 values survive Windows/Linux checkout. The tracked
+snapshot is a data-validated release candidate; the actual SFT rollout gate is still pending.
+
+Commit the `outputs/` directory together with updated code, docs, `.gitignore` and `.gitattributes`.
+A later clone includes the QA/reports; separate ZIP upload is optional. From a clone on Vast:
+
+```bash
+mkdir -p /workspace/data
+cp -a outputs/grasp-gold-evidence /workspace/data/
+```
+
+Trainer QA then resides at `/workspace/data/grasp-gold-evidence/train_mapped.jsonl`.
